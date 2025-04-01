@@ -6,3 +6,5 @@ const lineReader = readline.createInterface({
 });
 
 
+const apiKey = `7fa642aa79bbfa4e8451c11c`;
+const uRL = `https://v6.exchangerate-api.com/v6/${apiKey}/latest/USD`;
