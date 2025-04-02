@@ -20,7 +20,7 @@ https.get(uRL, (response) => {
         data = data + chunk; // // Getting the chunk of data from the server responding;
     }); // // Use of response.on / response.addListener to listen the event 'data';
     response.on('end', () => {
-        const rate = data;
+        const rate = JSON.parse(data).conversion_rates;
         console.log(rate); 
         // // Showing the data on console screen;
         // // Here, we are getting the data from the server;
