@@ -19,5 +19,10 @@ https.get(uRL, (response) => {
     response.addListener('data', (chunk) => {
         data = data + chunk; // // Getting the chunk of data from the server responding;
     }); // // Use of response.on / response.addListener to listen the event 'data';
-    response.on('end', () => {});  // // Use of response.on / response.addListener to listen the event 'end' after the data event not responding;
+    response.on('end', () => {
+        const rate = data;
+        console.log(rate); 
+        // // Showing the data on console screen;
+        // // Here, we are getting the data from the server;
+    });  // // Use of response.on / response.addListener to listen the event 'end' after the data event not responding or server not responding;
 });
