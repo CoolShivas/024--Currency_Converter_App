@@ -15,4 +15,5 @@ https.get(uRL, (response) => {
     // // uRL is used to hit the uRL link for fetching the data from it;
     // // Addition of response object i.e., ((response)) as a callback function;
     // // And, this (response) object is a readable string to listen 3 things data, end and error;
+    response.addListener('data', () => {}); // // Use of response.on / response.addListener to listen the event 'data';
 });
