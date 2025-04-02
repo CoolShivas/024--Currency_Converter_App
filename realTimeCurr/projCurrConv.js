@@ -21,8 +21,19 @@ https.get(uRL, (response) => {
     }); // // Use of response.on / response.addListener to listen the event 'data';
     response.on('end', () => {
         const rate = JSON.parse(data).conversion_rates;
-        console.log(rate); 
+        // console.log(rate); 
         // // Showing the data on console screen;
         // // Here, we are getting the data from the server;
+        lineReader.question(`Enter the amount in USD : `, () => {
+            lineReader.question(`Enter the target currency (e.g., INR, EUR, NPR) : `, () => {
+                console.log("End of printing Headings.");
+                lineReader.close(); // // Closing the project execution here;
+            });
+        });
     });  // // Use of response.on / response.addListener to listen the event 'end' after the data event not responding or server not responding;
 });
+// // // Here, we are getting the Output on Terminal as :-
+// // // Enter the amount in USD : 1
+// // // Enter the target currency (e.g., INR, EUR, NPR) : 2
+// // // End of printing Headings.
+// // // Completed running 'projCurrConv.js'
